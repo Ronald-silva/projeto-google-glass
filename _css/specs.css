@@ -1,0 +1,18 @@
+
+#conteudo{
+    width: 1000px;
+    margin: auto;
+    color: blue;
+}
+#frame-specs{
+    width: 400px;
+    height: 300px;
+    border:none;
+    overflow: hidden;
+}
+iframe#frame-specs::-webkit-scrollbar{
+    display:none;
+}
+p{
+    background-color: brown;
+}
