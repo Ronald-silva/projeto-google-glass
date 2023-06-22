@@ -1,0 +1,30 @@
+
+body{
+    padding-bottom:0px;
+}
+#conteudo{
+    width: 1000px;
+    margin: auto;
+    
+    
+}
+IFRame#rame{
+    width: 430px;
+    height: 250px;
+    border:none;
+    overflow: hidden;
+    
+}
+IFRame#rame::-webkit-scrollbar{
+    display: none;
+    background-color: blueviolet;
+    color: aqua;
+    width: 10px;
+   
+}
+#rodape p{
+    padding-bottom: -100%;
+    margin-bottom: -100px;
+    
+
+}
