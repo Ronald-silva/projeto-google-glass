@@ -6,13 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tudo sobre Google Glass</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="_css/form.css">
+  <script src="_javascript/funcoes.js"></script>
+  <script>
+    function calc_total(){
+      var qtd = parseInt(document.getElementById('cqtd').value);
+      tot = qdt * 1500
+      document.getElementsById('ctot').value = tot;
+    }
+
+  </script>
 </head>
 <body>
   <div id="interface">
     <header id="cabecalho">
       <h1>Google Glass</h1>
       <h2>A revolução do Google está chegando</h2>
-      <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt=""> 
+      <img id="icone" src="_imagens/contato.png" alt=""> 
     </header>
     <nav id="menu">
       <h1>Menu Principal</h1>
@@ -25,38 +35,62 @@
       </ul>
     </nav>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+<h3>Fale Conosco > Contato</h3> 
+<h1>Formulário de Contato</h1>
+<h2>por Gustavo Guanabara</h2>
+<h3 class="direita">Atualizado em 01/Maio/2013</h3>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+<form id="fcontato" action="mailto:contato@cursoemvideo.com" method="post" oninput="calc_total();">
+  <fieldset id="usuario">
+    <legend>Identificação do Usuário</legend>
+    <ul>
+    <li>Nome: <input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="nome completo"></li>
+    <li>Senha: <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="senha"></li>
+    <li>E-mail: <input type="email" name="tmail" id="cmail" size="20" maxlength="40" placeholder="email"></li>
+   <li>Data de Nascimento: <input type="date" name="tdata" id="cdata"></li>
+   <fieldset id="sexo">
+   <legend>Sexo</legend>
+   <ul>
+   <li><label for="cmasc">Masculino</label><input type="radio" name="tsexo" id="cmasc"></li>
+   <li><label for="cfem">Feminino</label><input type="radio" name="tsexo" id="cfem"></li>
+  </fieldset>
+   </ul> 
+    </ul>
+  </fieldset>
+ 
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+ 
+  
+   <fieldset id="endereco">
+   <legend>Endereço do Usuário</legend>
+   <ul>
+    <li>Logradouro:<input type="Logradouro" name="trua" id="crua" placeholder="nome da rua"></input></li>
+    <li>Número:<input type="number" size="12" maxlength="50" name="tnumero" id="cnumero"></li>
+    <li>Estado: <input type="text" name="t-estado" id="c-estado" placeholder="digite seu estado"></li>
+    <li>Cidade: <input type="text" name="tcidade" id="ccidade" placeholder="digite sua cidade"></li>
+  </ul>
+  </fieldset>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+  <fieldset id="mensagem">
+  <legend>Mensagem do Usuário</legend>
+  <ul>
+    <li>Grau de Urgência: Min<input type="range" name="turg" id="curg" min="0" max="10">Max</li>
+    <li>Mensagem: <textarea name="tmgs" id="cmsg" cols="30" rows="3"></textarea></li>
+  </ul>
+  </fieldset>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+  <fieldset id="pedido">
+  <legend>Quero um Google Glass</legend>
+  <ul>
+    <li> <input type="checkbox" name="tpergunta" id="cpergunta" >Gostaria de adquirir um Google Glass quando disponível</li>
+    <li>Cor: <input type="color" name="tcor" id="ccor"></li>
+    <li>Quantidade: <input type="number" name="tqtd" id="cqtd"></li>
+    <li>Preço Total: R$ <input type="text" name="ttot" id="ctot" placeholder="total a pagar" readonly></li>
+  </ul>
+  </fieldset>
 
-
-[BOTÃO ENVIAR]
+ <input type="image" src="_imagens/botao-enviar.png" name="tenviar" id="cenviar" >
+</form>
 
 <footer id="rodape">
     <p>Copyright &copy; 2013 - by Gustavo Guanabara <br> <a  target="_blank" href="http://Facebook.com/cursosemvideo">Facebook</a> | <a target="_blank" href="http://Twitter.com/cursosemvideo">Twitter</a></p>

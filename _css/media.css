@@ -1,0 +1,23 @@
+div#tv-radio{
+    width: 300px;
+    height: 180 px;
+    margin-left: 30px;
+    padding: 0px;
+   
+}
+#musica{
+    display:block;
+    position: relative;
+    left: 568px;
+    top: 540px;
+    width: 311px;
+    background-color:aliceblue;
+}
+#video{
+    display:block;
+    position: relative;
+    bottom:530px;
+    left: 63px;
+   
+}
+
